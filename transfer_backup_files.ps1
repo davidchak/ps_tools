@@ -1,10 +1,10 @@
 ﻿# Variables
-$sourse  = Get-ChildItem 'D:\mssql\backup' -Recurse
-$destination = '\\192.168.0.38\File Backup\1C'
+$sourse  = Get-ChildItem 'D:\sourse\path' -Recurse
+$destination = '\\destination\path'
 $date = Get-Date -Format dd.MM.yyyy
-$log = "D:\mssql\logs\transfer_log__$date.txt"
-$user = "backup"
-$password = Get-Content -Path C:\PS\key | ConvertTo-SecureString 
+$log = "D:\log_path\transfer_log__$date.txt"
+$user = "backup_username"
+$password = Get-Content -Path 'C:\path_with_encrypted_password\key' | ConvertTo-SecureString 
 $Credental = New-Object System.Management.Automation.PSCredential $user,$password
 
 
